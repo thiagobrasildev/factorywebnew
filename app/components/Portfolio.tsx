@@ -175,7 +175,7 @@ export default function Portfolio() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 group-hover:opacity-0"
+                        className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 group-hover:opacity-0"
                       />
                       <img
                         src={project.imageHover}
