@@ -8,7 +8,8 @@ const projects = [
   {
     title: "Dra. Tatiana Brasil",
     tag: "Institucional",
-    description: "Site profissional para gastroenterologista veterinária com seções de procedimentos, sobre e contato via WhatsApp.",
+    description:
+      "Site profissional para gastroenterologista veterinária com seções de procedimentos, sobre e contato via WhatsApp.",
     color: "from-blue-500/20 to-cyan-500/10",
     image: "/portfolio/tatiana-desktop.png",
     imageHover: "/portfolio/tatiana-mobile.png",
@@ -16,7 +17,8 @@ const projects = [
   {
     title: "Clínica Sorrir",
     tag: "Institucional",
-    description: "Site completo para clínica odontológica com agendamento online e galeria de procedimentos.",
+    description:
+      "Site completo para clínica odontológica com agendamento online e galeria de procedimentos.",
     color: "from-blue-500/20 to-cyan-500/10",
     image: undefined,
     imageHover: undefined,
@@ -24,7 +26,8 @@ const projects = [
   {
     title: "Advocacia Silva",
     tag: "Mini Site",
-    description: "Presença digital profissional para escritório de advocacia com foco em captação de clientes.",
+    description:
+      "Presença digital profissional para escritório de advocacia com foco em captação de clientes.",
     color: "from-purple-500/20 to-blue-500/10",
     image: undefined,
     imageHover: undefined,
@@ -40,7 +43,8 @@ const projects = [
   {
     title: "Studio Fit",
     tag: "Mini Site",
-    description: "Site moderno para academia com tabela de planos, horários e formulário de matrícula.",
+    description:
+      "Site moderno para academia com tabela de planos, horários e formulário de matrícula.",
     color: "from-green-500/20 to-cyan-500/10",
     image: undefined,
     imageHover: undefined,
@@ -48,7 +52,8 @@ const projects = [
   {
     title: "Restaurante Sabor",
     tag: "Institucional",
-    description: "Site institucional com cardápio digital, reservas online e integração com redes sociais.",
+    description:
+      "Site institucional com cardápio digital, reservas online e integração com redes sociais.",
     color: "from-orange-500/20 to-red-500/10",
     image: undefined,
     imageHover: undefined,
@@ -56,7 +61,8 @@ const projects = [
   {
     title: "Imobiliária Central",
     tag: "Institucional",
-    description: "Site completo com listagem de imóveis, filtros de busca e formulário de contato.",
+    description:
+      "Site completo com listagem de imóveis, filtros de busca e formulário de contato.",
     color: "from-primary/20 to-purple-500/10",
     image: undefined,
     imageHover: undefined,
@@ -87,7 +93,7 @@ export default function Portfolio() {
 
   const currentProjects = projects.slice(
     page * cardsPerPage,
-    page * cardsPerPage + cardsPerPage
+    page * cardsPerPage + cardsPerPage,
   );
 
   const goTo = (next: number) => {
@@ -97,7 +103,6 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-24 bg-surface overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-
         {/* Header */}
         <div className="flex items-end justify-between mb-16" ref={ref}>
           <div>
@@ -169,13 +174,15 @@ export default function Portfolio() {
                 className="group relative rounded-2xl border border-white/10 bg-background overflow-hidden hover:border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 cursor-pointer"
               >
                 {/* Image area */}
-                <div className={`h-56 bg-gradient-to-br ${project.color} relative flex items-center justify-center overflow-hidden`}>
+                <div
+                  className={`h-56 bg-gradient-to-br ${project.color} relative flex items-center justify-center overflow-hidden`}
+                >
                   {project.image ? (
                     <>
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 group-hover:opacity-0"
+                        className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 group-hover:opacity-0"
                       />
                       <img
                         src={project.imageHover}
@@ -197,7 +204,9 @@ export default function Portfolio() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-body font-semibold border ${tagColors[project.tag]}`}>
+                  <span
+                    className={`inline-block px-3 py-1 rounded-full text-xs font-body font-semibold border ${tagColors[project.tag]}`}
+                  >
                     {project.tag}
                   </span>
                   <h3 className="font-heading font-bold text-lg text-text-primary mt-3">
@@ -226,7 +235,6 @@ export default function Portfolio() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );
